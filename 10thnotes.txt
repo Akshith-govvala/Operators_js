@@ -1,0 +1,46 @@
+1.write a program to check whether the number is divisible by 2&3 and both.
+2. write a program to find the largest number out of three numbers expected from the user:
+ A=11,B=5,C=8
+3. Accept the following from the user and calculate the percentages of classes
+attended:
+a. Total number of working days
+b. Total number of days absent
+after calculating percentage show that, if the percentage is less than 75,
+then student will not be eligible to write exam.
+3rd ans: let w=parseInt(prompt("enter total number of days"))
+         let A=parseInt(prompt("enter total number of days"))\
+         let p=w-A
+         let AP=(P/W)*100
+         if(AP>=75){
+          document.write("eligible")
+         } else{
+          document.write("Not eligible")
+         }
+
+4th: A company decided to give bonus to employee according to 
+    following criteria:
+    Time period of service    bonus
+    More than 10 years         10%
+    >=6 and <=10                8%
+    Less than 6years            5%
+Ask the user for their salary and years of service and print the bonus amount 
+Ans:let a=parseInt(prompt("salary"))
+        let b=parseInt(prompt("years of service"))
+        if(b>10){
+            let c=a*0.1
+            let d=c+a
+            alert("after bonus salary"+d)
+        }
+        else if(b>=6 && b<=10){
+            let c=a*0.08
+            let d=c+a
+            alert("after bonus salary"+d)
+        }
+        else if(b<6){
+            let c=a*0.05
+            let d=c+a
+            alert("after bonus salary"+a)
+        }
+        else{
+            alert(a)
+        }
