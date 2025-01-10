@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let number=parseInt(prompt("enter a number:"))
+        // if (number % 2 === 0 && number % 3 === 0) {
+        //     document.write(number + " is divisible by both 2 and 3.");
+        // } else {
+        //     document.write(number + " is not divisible by both 2 and 3.");
+        // }
+
+        // let A = parseInt(prompt("Enter the first number (A):", 11));
+        // let B = parseInt(prompt("Enter the second number (B):", 5));
+        // let C = parseInt(prompt("Enter the third number (C):", 8));
+
+        // let largest;
+        // if (A >= B && A >= C) {
+        //     largest = A;
+        // } else if (B >= A && B >= C) {
+        //     largest = B;
+        // } else {
+        //     largest = C;
+        // }
+        // console.log(`The largest number is: ${largest}`);
+        // alert(`The largest number is: ${largest}`);
+
+
+        // let totalWorkingDays = parseInt(prompt("Enter the total number of working days:"));
+        // let daysAbsent = parseInt(prompt("Enter the total number of days absent:"));
+
+        // let daysAttended = totalWorkingDays - daysAbsent;
+        // let attendancePercentage = (daysAttended / totalWorkingDays) * 100;
+
+        // console.log(`Total working days: ${totalWorkingDays}`);
+        // console.log(`Days attended: ${daysAttended}`);
+        // console.log(`Attendance percentage: ${attendancePercentage.toFixed(2)}%`);
+
+        // if (attendancePercentage < 75) {
+        //     console.log("You are not eligible to write the exam.");
+        //     alert(`Your attendance is ${attendancePercentage.toFixed(2)}%. 
+        //         You are not eligible to write the exam.`);
+        // } else {
+        //     console.log("You are eligible to write the exam.");
+        //     alert(`Your attendance is ${attendancePercentage.toFixed(2)}%. 
+        //     You are eligible to write the exam.`);
+        // }
+
+        // let w=parseInt(prompt("enter total number of days"))
+        //  let A=parseInt(prompt("enter total number of days"))
+        //  let P=w-A
+        //  let AP=(P/W)*100
+        //  if(AP>=75){
+        //   document.write("eligible")
+        //  } else{
+        //   document.write("Not eligible")
+        //  }
+        let salary = parseFloat(prompt("Enter your current salary:"));
+        let yearsOfService = parseInt(prompt("Enter your years of service:"));
+
+        let bonusPercentage;
+        if (yearsOfService > 10) {
+            bonusPercentage = 10;
+        } else if (yearsOfService >= 6 && yearsOfService <= 10) {
+            bonusPercentage = 8;
+        } else {
+            bonusPercentage = 5;
+        }
+        let bonusAmount = (bonusPercentage / 100) * salary;
+        console.log(`Your years of service: ${yearsOfService} years`);
+        console.log(`Your salary: $${salary.toFixed(2)}`);
+        console.log(`Bonus percentage: ${bonusPercentage}%`);
+        console.log(`Bonus amount: $${bonusAmount.toFixed(2)}`);
+        alert(`Your bonus amount is $${bonusAmount.toFixed(2)}.`);
+    </script>
+</body>
+
+</html>
