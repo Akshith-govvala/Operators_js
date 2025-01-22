@@ -1,0 +1,61 @@
+      // for(let i=2;i<=8;i=i+1){ //i=1;3;4;5
+        //   if(i>5){              //c=1<=8,3<=8;5<=8;7<=8
+        //     continue            //U=i+2;1+2=3;3+2=5;5+2=7;
+        //   }                     //B=i+1;1+1=2;3+1=4;5+1=6;
+        //   console.log(i+2)
+        // }
+
+        // for (let i = 1; i <= 3; i++) {
+        //     document.write(i, "<br>");
+        //     for (let j = 1; j <= 4; j++) {
+        //         document.write(j, "");
+        //     }
+        //     document.write("<br>")
+        // }
+
+//RightAnglePyramid
+        // for(let i=1; i<=5; i++){
+        //     for(let j=1; j<=6-i; j++){
+        //         document.write("*");
+        //     }
+        //     document.write("<br>")
+        // }
+
+// Pyramid
+let rows = 5; 
+for (let i = 1; i <= rows; i++) {
+    let row = '';
+
+    for (let j = 1; j <= rows - i; j++) {
+        row += ' ';
+    }
+
+    for (let k = 1; k <= 2 * i - 1; k++) {
+        row += '*';
+    }
+
+    console.log(row);
+}
+
+
+Continue: if it matches the condition it skips remaining part executes;
+
+for(let i=2; i<=8;i=i+2){
+  if(i<4){
+    break;
+    }console.log(i+1)
+}
+
+for(let i=1;i<=8;i=i+2){
+  if(i>5){
+    continue
+  }
+  console.log(i+1)
+}
+
+Nested Loops:
+A loop inside the another loop
+The inner loop will execute one time for each iteration of outer loop
+An inner loop within the repeating block of outer loop.
+
+//Outer loop 
