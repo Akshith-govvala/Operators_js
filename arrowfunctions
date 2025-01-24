@@ -1,0 +1,126 @@
+Arrow Function:
+--ES6 version
+--More readable and more structure
+--Anonymous function(lambda functions)
+--without function name but they are assigned to a variable
+
+example:
+Arrow Functions with out parameter:
+let c=()=>{
+  console.log("Hi Akshith!")
+}
+c()
+
+Arrow functions with parameter:
+Example:
+let x=(x,y)=>{
+  console.log(x+y)
+}
+x(20,30)
+x(40,50)
+
+Arrow function with one argument:
+#Without using paranthesis
+
+let greet=x=>console.log(x);
+greet("Hello")
+
+Arrow Functions as an expression
+let age=18;
+let welcome=(age<18)>
+()=>console.log("Hi Akshith")
+()=>console.log("Hi Raashi Khanna")
+welcome()
+
+function task1(){
+  console.log("Task1: Start")
+}
+function task2(){
+  console.log("Task2: Start")
+}
+function task3(){
+  console.log("Task3: Start")
+}
+task1()
+task2()
+task3()
+
+A call back function is a function that is passed argument to another function;
+Example:
+function greet(name,callback){
+  console.log(`Hello,${name}!)`
+  callback();
+}
+function sayGoodbye(){
+  console.log("Goodbye")
+}
+greet("sam", sayGoodbye)
+
+
+VSCode:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let c = () => {
+        //     console.log("Hi Akshith!")
+        // }
+        // c()
+
+        // let x = (x, y) => {
+        //     console.log(x + y)
+        // }
+        // x(20, 30)
+        // x(40, 50)
+
+        // let age = 16;
+        // let welcome = (age < 18)?
+        // ()=> console.log("Hi Akshith"):()=> console.log("Hi Raashi Khanna")
+        // welcome()
+
+        // function task1() {
+        //     console.log("Task1: Start")
+        // }
+        // function task2() {
+        //     console.log("Task2: Start")
+        // }
+        // function task3() {
+        //     console.log("Task3: Start")
+        // }
+        // task1()
+        // task2()
+        // task3()
+
+        // console.log("Hi Akshith");
+        // setTimeout(()=>{
+        //     console.log("Hi! I am waiting!");
+        // },2000);
+        // console.log("I am in lab")
+
+        // console.log("Hi Akshith");
+        // setTimeout(()=>{
+        //     console.log("Hi! I am waiting!");
+        // },2000);
+        // console.log("I am in lab")
+
+        function greet(name, callback) {
+            console.log(
+                `Hello,${name}!`)
+                callback();
+            }
+            function sayGoodbye() {
+                console.log("Goodbye")
+            }
+            greet("sam", sayGoodbye)
+    </script>
+</body>
+
+</html>
