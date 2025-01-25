@@ -1,0 +1,126 @@
+Notes:
+
+A call back function is a function that is passed argument to another function;
+--you can pass the callback function as a argument to another function
+
+Example:
+function greet(name,callback){
+  console.log(`Hello,${name}!)`
+  callback();
+}
+function sayGoodbye(){
+  console.log("Goodbye")
+}
+greet("sam", sayGoodbye)
+
+execution: The function receiving the callback will execute the callback at some point during its executions
+(often at end or after an asynchronous operation is done)
+
+Ex:
+function mainFunction(callback){
+  console.log("Executing Main Function")
+  callback()
+}
+function callbackFunction(){
+  console.log("Call Back function executed")
+}
+mainFunction(callbackFunction)
+
+exp:
+mainfunction takes a callback as parameter callbackFunction is passed to mainfunction 
+inside the mainFunction, the callback function is called with callback().
+
+ex2:
+Passing a named function as a callback
+function greet(name,callback){
+  console.log("hello"+name);
+  callback();
+}
+function goodbye(){
+  console.log("GoodBye!")
+}
+greet("BABU",goodbye)
+
+ex3: using an anonymous function as callback;
+function greet(name,callback){
+  console.log(`name,${name}!`)
+  callback();
+}
+greet("Akshith",function(){
+  console.log('An erripook");
+})
+exp: we didn't passed a naming function like goodbye
+Instead of that we define an anonymous function directly within the function call.
+
+ex4:
+asynchronous callback with setTimeout
+
+function fetchData(callback){
+  console.log("Fetching Data...")
+} setTimeout(function(){
+  console.log("Data Fetched..")
+  callback()
+  //executes callback after a delay
+}2000);
+
+function processData(){
+  console.log("Processing the Fetch data..")
+}
+fetchData(processData)
+
+VScode:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function mainFunction(callback) {
+        //     console.log("Executing Main Function")
+        //     callback()
+        // }
+        // function callbackFunction() {
+        //     console.log("Call Back function executed")
+        // }
+        // mainFunction(callbackFunction)
+
+        // function greet(name, callback) {
+        //     console.log("hello" +" "+ name);
+        //     callback();
+        // }
+        // function goodbye() {
+        //     console.log("GoodBye!")
+        // }
+        // greet("Daridram", goodbye)
+
+        // function greet(name, callback) {
+        //     console.log(`Hello!, ${name}!`);
+        //     callback();
+        // }
+        // greet("Akshith", function () {
+        //     console.log("is An erripook");
+        // })\
+
+        function fetchData(callback) {
+            console.log("Fetching Data...")
+            setTimeout(function () {
+                console.log("Data Fetched..")
+                callback()
+                //executes callback after a delay
+            }, 2000);
+        }
+
+        function processData() {
+            console.log("Processing the Fetch data..")
+        }
+        fetchData(processData)
+    </script>
+</body>
+
+</html>
