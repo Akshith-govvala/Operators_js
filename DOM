@@ -1,0 +1,91 @@
+Notes: 
+
+DOM(Document Object Model)
+-- It is a programming interface in web development that allows 
+us to interact and manipulate (Change) the HTML document.
+When the webpage is loaded, the browser creates the DOM of the webpage.
+
+When an HTML file is loaded in the browser, the javascript cannont understand 
+the HTML document directly.
+
+DOM: is basically the representation of the same HTML document but in a tree-like structure
+composed of objects.
+
+HTML dom it allows javascript to access and modify all the elements in html document.
+
+keypointa:
+1.structure:THe DOM represents the strucute of HTML document as tree; 
+each node in a tree represents the element, an attribute,text.
+2.Manipulation:Using js,you can interact with elements(buttons,h,p) we can modify,add,
+remove elements.
+change styles;
+3.Event Handling:
+4.W3C-World Wide Web consortium.
+
+<html>
+<head>
+<title>MRUH</title>
+</head>
+<body>
+<h1> This is an Ep college.</h1>
+</body>
+</html>
+
+--in DOM all HTML elements are defined as the objects.
+property: It is a value that youbcan set to the objects.(Like changing content 
+of an HTML element)
+Methods:an action(Like add or delete)
+
+Methods of DOM:
+1.Getting an element by Id:
+-- returns specific elements
+2.Getting an element by class:
+---returns all the elements having the same class name.
+--- return in the form of HTML collection
+3.Getting an element by tagname.
+4.Getting an element by query selector.
+
+<h1>
+
+VSCode:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{
+            color: greenyellow;
+        }
+        .b{
+            color: red;
+        }
+        .c{
+            color:cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="b" id="a">Akshith</h1>
+    <h1 class="b" id="b">Ashish</h1>
+    <h2 class="b" id="c">Jayadeep</h2>
+    <h1 class="c">Surya</h1>
+    <h2 class="c">Sreenath</h2>
+    <h1 class="c">Jaswith</h1>
+
+
+    <script>
+        // let x=document.getElementById("a");
+        // console.log(x)
+
+        let x=document.getElementsByTagName("h1");
+        // console.log(x)
+
+        for(let i=0;i<x.length;i++){
+            console.log(x[i])
+        }
+    </script>
+</body>
+</html>
