@@ -1,0 +1,165 @@
+Notes:
+DOM methods:
+	
+	insertBefore():- used to insert a new node before an existing node as child node of a specified parent.
+
+	Requires a reference to both the new node and existing node you want to insert before.
+
+// Example:-
+
+// <body>
+//     <div id="a">
+//         <h1>Hi</h1>
+//         <h1>world</h1>
+//     </div>
+//     <div id="b">
+//         <h2 id="r">2</h2>
+//         <h2>3</h2>
+//     </div>
+//     <script>
+//         let n=document.createElement('h2')
+//         n.textContent='1'
+
+//         let p=document.getElementById('b')
+//         let l=document.getElementById('r')
+
+//         p.insertBefore(n,l)
+//     </script>
+// </body>
+
+Remove element: 
+Let b=document.getElementByID(“a”)
+B.remove()	//removes it completely
+Remove child
+Replace
+
+  VSCode:
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="a">
+    <h1>Ravi</h1>
+    <h1 id ="r">Ram</h1>
+    <h1></h1>
+    <div id="b">
+      <h2>Sam</h2>
+      <h2>Venkat</h2>
+    </div>
+  </div>
+  <script>
+    let n=document.createElement('h1')
+    n.textContent='chiru'
+    let p=document.getElementById('a')
+    let l=document.getElementById('r')
+    p.insertBefore(n,l)
+  </script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="a">
+    <h1 id="s">Ravi</h1>
+    <h1 id ="r">Ram</h1>
+    <h1></h1>
+  </div>
+    <div id="b">
+      <h2>Sam</h2>
+      <h2 id="d">Venkat</h2>
+    </div>
+  <script>
+    let n=document.createElement('h1')
+    let c=document.createElement('h1')
+    c.textContent='chiru'
+    n.textContent='jaswith'
+
+    let h=document.createElement('h2')
+    h.textContent='badulla'
+
+    let p=document.getElementById('a')
+    let j=document.getElementById('s')
+    let l=document.getElementById('r')
+    
+    let pp=document.getElementById('b')
+    let e=document.getElementById('d')
+    p.insertBefore(c,l)
+    p.insertBefore(n,j)
+    pp.insertBefore(h,e)
+  </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="a">
+        <h1>Hi</h1>
+        <h1>world</h1>
+    </div>
+    <div id="b">
+        <h2 id="r">2</h2>
+        <h2>3</h2>
+    </div>
+    <script>
+        let n=document.createElement('h2')
+        n.textContent='1'
+
+        let p=document.getElementById('b')
+        let l=document.getElementById('r')
+
+        p.insertBefore(n,l)
+    </script> -->
+    <!-- <div id="a">
+        <h1>Ravi</h1>
+        <h1 id="r">Ram</h1>
+    </div>
+    <div id="b">
+        <h2>Sam</h2>
+        <h2>venkat</h2>
+    </div>
+    <script>
+        let n=document.createElement('h2').
+        n.textContent='jaya'
+        let p=document.getElementById('a')
+        let l=document.getElementById('r')
+        p.insertBefore(n,l) -->
+        <div id="a">
+            <h1>Ravi</h1>
+            <h1 id="rr">Ram</h1>
+        </div>
+        <div id="b">
+            <h2>Sam</h2>
+            <h2>venkat</h2>
+        </div>
+        <script>
+        let n=document.createElement('h2')
+        n.textContent='jaya'
+        let p=document.getElementById("a")
+        let l=document.getElementById("r")
+        p.insertBefore(n,l)
+
+        let nn=document.createElement('h2')
+        nn.textContent='Ganesh'
+
+        let pp=document.getElementById("a")
+        let ll=document.getElementById("rr")
+        pp.insertBefore(nn,ll)
+        </script>
+    </script>
+</body></html>
