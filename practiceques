@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Question:scenario:1 Voting eligability system in JS. 
+        // You are asked with building a system to check whether a person is eligible to vote. 
+        // The system follows rules: 1.A person must be atleast 18years old to vote 
+        // 2. If the person is a citizen, they are eligible to vote  
+        // 3. If the person is not a citizen but has passed a citizenship test, 
+        // they are eligible to vote 4. If the person is under 18, 
+        // cannot vote 
+        // function checkVotingEligibility(age, isCitizen, passedTest) {
+        //     if (age < 18) {
+        //         return "Not eligible to vote";
+        //     } else if (isCitizen) {
+        //         return "Eligible to vote";
+        //     } else if (passedTest) {
+        //         return "Eligible to vote";
+        //     } else {
+        //         return "Not eligible to vote";
+        //     }
+        // }
+
+        // console.log(checkVotingEligibility(20, true, false));
+        // console.log(checkVotingEligibility(17, false, true));
+        // console.log(checkVotingEligibility(19, false, true));
+        // console.log(checkVotingEligibility(25, false, false));
+
+        // document.write(checkVotingEligibility(20, true, false));
+        // document.write(checkVotingEligibility(17, false, true));
+        // document.write(checkVotingEligibility(19, false, true));
+        // document.write(checkVotingEligibility(25, false, false));
+
+//function checkVotingEligibility(age, isCitizen, passedTest) {
+    //return age >= 18 && (isCitizen || passedTest) ? "Eligible to vote" : "Not eligible to vote";
+    // }
+
+    // // Example usage
+    // console.log(checkVotingEligibility(20, true, false)); // Eligible to vote
+    // console.log(checkVotingEligibility(17, false, true)); // Not eligible to vote
+    // console.log(checkVotingEligibility(19, false, true)); // Eligible to vote
+    // console.log(checkVotingEligibility(25, false, false)); // Not eligible to vote
+
+    // let age = parseInt(prompt("Enter your age:"))
+        
+    //     if(age>=18 ){
+    //         let citizen = confirm("Are you a citizen?")
+    //         let passedCitizenTest = confirm("Have you passed citizen test?")
+    //         document.write("You are eligible to vote")
+            
+    //         if(age>=18 && !citizen && passedCitizenTest){
+    //             document.write("You are eligible to vote")
+    //         }
+            
+    //     }else{
+    //         document.write("You are not eligible to vote")
+    //     }
+
+
+    // function calculateDiscountedPrice() {
+    //         let amount = parseInt(prompt("Enter the amount spent: "));
+    //         let isPremium = prompt("Are you a premium member? (yes/no)").toLowerCase() === "yes";
+
+    //         let discount = 0;
+
+    //         if (amount > 100) {
+    //             discount = 0.20;
+    //         } else if (amount > 50 && amount <= 100) {
+    //             discount = 0.10;
+    //         }
+
+    //         if (isPremium) {
+    //             discount += 0.05;
+    //         }
+
+    //         let finalAmount = amount - (amount * discount);
+    //         console.log("Final amount after discount: Rs.", finalAmount);
+    //         document.write("Final amount after discount: Rs.", finalAmount);
+    //     }
+
+    //     calculateDiscountedPrice();
+
+            let age = parseInt(prompt("Enter your age: "));
+            let isVIP = prompt("Are you a VIP member? (yes/no)").toLowerCase() === "yes";
+            let hasSpecialAccess = prompt("Do you have special access? (yes/no)").toLowerCase() === "yes";
+
+            if (age < 18) {
+                console.log("You are not allowed to attend any events.");
+            } else if (isVIP) {
+                console.log("You can attend all events.");
+            } else if (hasSpecialAccess) {
+                console.log("You can attend special events.");
+            } else {
+                console.log("You are not eligible to attend any events.");
+            }
+
+    </script>
+</body>
+
+</html>
