@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script> -->
+</head>
+<body>
+    <!-- <div id="root"> </div>
+    <script src="a.js"></script> -->
+
+    <div id="app"></div>
+    <script type="text/babel"></script>
+    const n=10;
+    const m=<h1> React is better than JSX</h1>
+    const element =<h1 className="'a">"HEllo! JSX!</h1> 
+
+    const e=<document.getElementbyID('app')
+</body>
+</html>
+
+const b=React.createElement(
+    'h1',{id:'a'}, "I am Akshith"
+);
+
+const element=document.getElementById('root')
+const root=ReactDOM.createRoot(element)
+root.render(b)
+
+
+Notes:
+create Element by using js:
+--document.createElement('h1')
+Create element by using React-js:
+React.createElement('hi')
+Syntax:
+React.createElement(type ,props)
+Type = tagname (h1 ,p ,div)
+Prop = id ,className ,Onclick
+
+ReactDOM.createRoot()
+ReactDOM.render() -method is used to display to the element
+Syntax:
+Reactelement =what to render
+Container =where to render
+
+JSX:
+JavascriptXML
+-- It is a syntax extension for js
+-- here we write the html code and this will be translated into JS
+--babel =tool(converts to html code)
+
+points:
+<br/>
+<img/>
