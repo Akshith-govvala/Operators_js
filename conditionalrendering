@@ -1,0 +1,112 @@
+Notes:
+
+JSX:
+JavascriptXML
+-- It is a syntax extension for js
+-- here we write the html code and this will be translated into JS
+--JSX allows us to write HTML code in react JS
+--JSX all the HTMK tags must be closed
+--JSX compiles the HTML code to JS
+--babel =tool(converts to html code into jsx;)
+
+#CDN-parseInt
+#reactjs
+
+points:
+<br/>
+<img/>
+
+--to create a element in react js
+--react.createElement()
+Syntax:
+Type=tag name(h1,p,div)
+prop=class,id
+ReactDOM.createRoot()- to render the element
+React element=what to render 
+
+Conditional Rendering:
+
+Functions:
+using a functional call:
+-- you can use a function call directly within the JSX expression
+
+VSCode:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body><div id="root"></div>
+    <script type="text/babel">
+        const App=()=>{
+            const isLoggedIn=true;
+            return(
+            <div>
+                {isLoggedIn?(<h1>Welcome back,user</h1>):(<h1>Please Login</h1>)}
+                {isLoggedIn &&<h1>you have a new notification</h1>}
+            </div>
+            )
+        }
+        const root=ReactDOM.createRoot(document.getElementById('root'))
+        root.render(<App/>)
+    </script>
+
+    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="a"> </div>
+    <script type="text/babel">
+        function getGreeting(name){
+            return Hello ${name}! Welcome to React
+        }
+
+        function Greeting(){
+            const name = "Kavya";
+            return <h1> {getGreeting(name)} </h1>; 
+        }
+
+        //rendering the component
+        const root = ReactDOM.createRoot(document.getElementById('a'));
+        root.render(<Greeting/>);
+    </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="a"> </div>
+    <script type="text/babel">
+        const element = <h1>Welcome to SRI's MMS problems</h1>
+        const e = document.getElementById('a');
+        const root = ReactDOM.createRoot(e);
+        root.render(element);
+    </script>
+</body>
+</html>
+
