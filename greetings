@@ -1,0 +1,133 @@
+import React from "react";
+const FruitList=()=>{
+    const fruits = ['apple','cherry','orange','grapes'];
+    return(
+        <div>
+            <h1>Fruits List</h1>
+            <ul>
+                {fruits.map((fruit,index)=>(
+                    <li key={index}>{fruit}</li>
+                ))}
+            </ul>
+        </div>
+    )
+}
+
+export default FruitList;
+
+import React from 'react';
+
+function Greeting({isLoggedIn}){
+    if(isLoggedIn){
+        return <h1>Welcome back!</h1>
+    }else{
+        return <h1>Please Login </h1>
+    }
+}
+export default Greeting;
+
+.greeting{
+  color: lightcoral;
+  font-size: 80px;
+  background-color:black;
+  text-align:center;
+  width: auto;
+  margin-left: 60px;
+  margin-right: 60px;
+  height: 60px;
+  padding-top: 20px;
+  padding-bottom:80px;
+  border-radius:20px;
+}
+
+// import logo from './logo.svg';
+// import './App.css';
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Edit <code>src/App.js</code> and save to reload.
+//         </p>
+//         <a
+//           className="App-link"
+//           href="https://reactjs.org"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//         >
+//           Learn React
+//         </a>
+//       </header>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// import React from 'react'
+// import './App.css'
+
+// const Welcome=()=><h1 className='message'>Hello AwwwSHIT!</h1>
+// function App(){
+//   return(
+//     <div className='App'>
+//       <Welcome/>
+//     </div>
+//   )
+// }
+// export default App;
+
+// import React from 'react';
+// // import './welcome.js';
+// // import Welcome from './welcome.js';
+// import './greeting.js';
+// import Greeting from './greeting.js';
+
+// const Welcome=()=> <h1 className='message'>Hello World!</h1>
+// function App() {
+//   return(
+//     <div className="App">
+//     <Welcome/> </div>
+//   )
+// }
+
+// const App=()=>{
+//   return(
+//     <div style={{textAlign:'center'}}>
+//       <Welcome name='Babu' greeting='Hello'/>
+//       <Welcome name='chinna' greeting='Hi'/>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+// import React from 'react';
+// import Greeting from './greeting.js';
+
+// const App=()=>{
+//   const isLoggedIn=true;
+//   return(
+//     <div className='App'>
+//       <Greeting isLoggedIn={isLoggedIn}/>
+//     </div>
+//   )
+// }
+
+// export default App;
+
+import React from 'react';
+import "./App.css"
+import FruitList from './fruits';
+
+const App=()=>{
+  return(
+    <div className="">
+      <FruitList/>
+    </div>
+  )
+}
+
+export default App;
