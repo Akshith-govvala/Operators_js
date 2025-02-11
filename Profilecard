@@ -1,0 +1,98 @@
+profilecard.js:
+
+import React from "react";
+import "./App.css";
+
+const ProfileCard = ({ name, greeting, imageSrc }) => {
+  return (
+    <div className="profile-card">
+      <img src={imageSrc} alt={name} />
+      <h2>{name}</h2>
+      <p>{greeting}</p>
+    </div>
+  );
+};
+
+export default ProfileCard;
+
+app.js:
+import React from "react";
+import ProfileCard from "./ProfileCard";
+import "./App.css";
+
+const App = () => {
+  const users = [
+    {
+      name: "Mahesh Babu",
+      greeting: "Hello, welcome!",
+      imageSrc: "https://tse3.mm.bing.net/th?id=OIP.NiByMxrFLSacGN1U8HGBTgHaJ4&pid=Api&P=0&h=180",
+    },
+    {
+      name: "Raashi Khanna",
+      greeting: "Nice to meet you!",
+      imageSrc: "https://i.pinimg.com/736x/fe/fe/3a/fefe3a3a84d463e659357f626625ad8e.jpg",
+    },
+    // {
+    //   name: "Rukshar ",
+    //   greeting: "Have a great day!",
+    //   imageSrc: "https://i.pinimg.com/736x/5e/5f/59/5e5f59fe0739480543c0831b3dc2993d.jpg",
+    // },
+  ];
+
+  return (
+    <div className="app-container">
+      {users.map((user, index) => (
+        <ProfileCard
+          key={index}
+          name={user.name}
+          greeting={user.greeting}
+          imageSrc={user.imageSrc}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default App;
+
+App.css:
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  width: 250px;
+}
+
+.profile-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.profile-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-card p {
+  color: #666;
+}
