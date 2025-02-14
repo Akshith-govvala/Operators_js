@@ -1,0 +1,71 @@
+import React from 'react';
+const Child=({changeMessage})=>{
+    return(
+        <button onClick={changeMessage}>Change Message</button>
+    );
+}
+
+export default Child;
+
+import React, {useState} from 'react';
+import Child from './Child.js'
+
+const Parent=()=>{
+  const[message,setMessage]=useState('Hello World')
+
+  const changeMessage=()=>{
+    setMessage("Clicked the button");
+  };
+
+  return(
+    <div>
+      <h1>{message}</h1>
+      <Child changeMessage={changeMessage}/>
+    </div>
+  )
+}
+
+export default Parent;
+
+
+import React, { useReducer } from "react";
+
+const appleImage = "https://t4.ftcdn.net/jpg/02/52/93/81/360_F_252938192_JQQL8VoqyQVwVB98oRnZl83epseTVaHe.jpg";
+
+function appleReducer(state, action) {
+  switch (action.type) {
+    case "ADD_APPLE":
+      return state + 1;
+    case "EAT_APPLE":
+      return state > 0 ? state - 1 : 0;
+    default:
+      return state;
+  }
+}
+
+function App() {
+  const [state, dispatch] = useReducer(appleReducer, 3);
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Apple Counter</h1>
+      <p>Number of Apples: {state}</p>
+
+      <button onClick={() => dispatch({ type: "ADD_APPLE" })}>ADD APPLE</button>
+      <button onClick={() => dispatch({ type: "EAT_APPLE" })}>EAT APPLE</button>
+
+      <div style={{ display: "flex", flexWrap: "wrap", marginTop: "20px" }}>
+        {Array.from({ length: state }).map((_, index) => (
+          <img
+            key={index}
+            src={appleImage}
+            alt="Apple"
+            style={{ width: "50px", height: "50px", margin: "5px" }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default App;
