@@ -1,0 +1,107 @@
+// export default App;
+
+// import React,{useState} from "react";
+// function App(){
+//   const [text,setText]=useState("")
+
+//   const handleChange=(event)=>{
+//     setText(event.target.value)
+//   }
+//   return(
+//     <div>
+//       <input type="text" value={text} onChange={handleChange} />
+//       <p>Your text: {text}</p>
+//     </div>
+//   )
+// }
+// export default App;
+
+// import React,{ useState } from "react";
+// import "./App.css"
+// function App(){
+
+//   const[isHovered, setIsHovered]=useState(false);
+
+//   const handleMouseEnter=()=>{
+//     setIsHovered(true);
+//   }
+
+//   const handleMouseLeave=()=>{
+//     setIsHovered(false);
+//   }
+
+//   return(
+//     <div className="App">
+//       <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} 
+//       style={{backgroundColor:isHovered ? "lightblue" : "lightgray",
+//               color:isHovered ? "white" : "black"
+//       }}> Hover Me</button>
+
+//       {isHovered && <p>Mouse is over the button!</p>}
+//     </div>
+//     )
+// }
+
+// export default App;
+
+import React,{ useState } from "react";
+import "./App.css"
+function App(){
+
+  const[key, setKey]=useState("");
+
+  const handleKeyDown=(event)=>{
+    setKey(event.key);
+  }
+
+  return(
+    <div className="App">
+      <h1>Welcome to Keyboard!</h1>
+      {key && <h2>Pressed key : {key}</h2>}
+      <input type="text" onKeyDown={handleKeyDown} placeholder="Press any key"/>
+    </div>
+    )
+}
+
+export default App;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  width: 250px;
+}
+
+.profile-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.profile-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.profile-card p {
+  color: #666;
+}
