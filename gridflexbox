@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .parent{
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 15% 70% 15%;
+            grid-template-columns: 15% 70% 15%;
+        }
+
+        .header{
+            background-color: crimson;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row: 1/2;
+            grid-column: 1/4;
+
+        }
+        .aside{
+            background-color: turquoise;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row: 2/3;
+            grid-column: 1/2;
+        }
+        .main{
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        .rightmenu{
+            background-color: darkviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row: 2/3;
+            grid-column:3/4 ;
+        }
+        .footer{
+            background-color: olivedrab;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            grid-row: 3/4;
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="header">Header</div>
+        <div class="aside">Aside</div>
+        <div class="main">Main</div>
+        <div class="rightmenu">RightMenu</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
+
+
+Grid FlexBox: Header,aside,footer,RightMenu,main.
+
+flex: It is one dimensional/directional
+grid: It is two dimensional/directional
+
+To use:
+flex: display:flex;
+grid: display:grid;
+
+flex: It is easy and flexible to work
+Grid:It is complex but very powerful
+
+flex: it has limited tools
+grid: advanced tools
+
+display:grid;  -- it defines the grid container
+grid-template-rows: it specifies how many rows in a webpage has been divided and
+                    how much each row has occupied
+
+grid-template-column: it specifies how many couls in a webpage and 
+                      how much each column was divided/occupied.
+
+grid-row: it specifies the start and end of each row
+grid-column: it specifies the start and end of each column.
