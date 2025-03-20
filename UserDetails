@@ -1,0 +1,88 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Header from '.Header';
+import Footer from '.Footer';
+import './UserDetails';
+const UserDetails = () => {
+    const navigate = useNavigate();
+    const [user, setUser] = useState({
+        name: '',
+        email: '',
+        movile: '',
+        address: '',
+    });
+    const [error, setError] = useState('');
+    const handlechange = (e) => {
+        setUser({ ...user, [e.target.name]: e.target.name });
+        setError('');
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const { name, email, mobile, address } = user;
+        if (!name.trim() || !email.trim() || !mobile.trim() || !address.trim()) {
+            setError('Please fill all the fields');
+            return;
+        }
+        if (!/^S+@\S+\.\S+$/.test(email)) {
+            setError('Invalid email');
+            return;
+        }
+        if (!/^d{10}$/.test(mobile)) {
+            setError('Invalid mobile number');
+            return;
+        }
+        sessionStorage.setItem('userDetails', JSON.stringify(user));
+        navigate('/user-payment');
+    };
+    return (
+        <>
+            <Header />
+            <div className="user-details-container">
+                <form className="user-details-form" onSubmit={handleSubmit}>
+                    <h2>Enter your details</h2>
+                    {error && <p className="error-message">{error}</p>}
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Full Name"
+                        value={user.name}
+                        onChange={handlechange}
+                        required
+                    />
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={user.email}
+                        onChange={(e) => setUser({ ...user, [e.target.name]: e.target.value })}
+                        required
+                    />
+
+                    <input
+                        type="tel"
+                        name="mobile"
+                        placeholder="Mobile Number"
+                        value={user.mobile}
+                        onChange={(e) => setUser({ ...user, [e.target.name]: e.target.value })}
+                        required
+                    />
+
+                    <input
+                        type="text"
+                        name="address"
+                        placeholder="Address"
+                        value={user.address}
+                        onChange={(e) => setUser({ ...user, [e.target.name]: e.target.value })}
+                        required
+                    />
+                    <div className="button-group">
+                        <button type="back-btn">Back</button>
+                    </div>
+                    <button type="submit" className="submit-btn">Submit</button>
+                </form>
+            </div>
+            <Footer/>
+        </>
+    );
+};
+export default UserDetails;
